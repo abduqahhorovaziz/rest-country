@@ -17,7 +17,7 @@
 
 <body>
 
-  <header class="py-6 shadow-header-shadow bg-white dark:bg-[#2B3844]">
+  <header class="py-6 shadow-header-shadow bg-white dark:bg-[#2B3844] fixed z-50 w-full">
     <div class="container font-nunito">
       <nav class="flex items-center justify-between text-[#111517] dark:text-white">
         <div>
@@ -25,11 +25,11 @@
           </h1>
         </div>
         <div>
-          <button id="switchMode"
-            class="font-semibold sm:text-[16px] text-[12px] sm:leading-[22px] leading-[16px] flex items-center"
-            onclick="toggleTheme()">
-            <i class="fa-regular fa-moon mr-2"></i>
-            Dark Mode
+          <button id="moon" class="font-semibold sm:text-[20px] text-[14px] sm:leading-[26px] leading-[20px] flex items-center">
+              <i class="fa-regular fa-moon"></i>
+          </button>
+          <button id="sun" class="font-semibold sm:text-[20px] text-[14px] sm:leading-[26px] leading-[20px] flex items-center">
+              <i class="fa-regular fa-sun"></i>
           </button>
         </div>
       </nav>
@@ -37,7 +37,7 @@
     </div>
   </header>
 
-  <main class="bg-[#FAFAFA] dark:bg-[#202C36] relative">
+  <main class="bg-[#FAFAFA] dark:bg-[#202C36] min-h-screen relative pt-[70px]">
     <section class="py-12">
       <div class="container font-nunito">
         <div class="md:flex items-center justify-between mb-12">
@@ -58,12 +58,12 @@
             </button>
             <div id="downMenu"
               class="absolute hidden w-full mt-[4px] py-[8px] rounded-[5px] bg-white dark:bg-[#2B3844] cursor-pointer shadow-search-shadow md:text-[14px] text-[12px] leading-[20px] text-[#111517] dark:text-white">
-              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">All</p>
-              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">Africa</p>
-              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">America</p>
-              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">Asia</p>
-              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">Europe</p>
-              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">Oceania</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 dark:hover:bg-slate-800 w-full">All</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 dark:hover:bg-slate-800 w-full">Africa</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 dark:hover:bg-slate-800 w-full">America</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 dark:hover:bg-slate-800 w-full">Asia</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 dark:hover:bg-slate-800 w-full">Europe</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 dark:hover:bg-slate-800 w-full">Oceania</p>
             </div>
           </div>
         </div>
@@ -75,8 +75,9 @@
       </div>
     </section>
 
-    <div id="countryModal" class="fixed z-10 hidden w-full min-h-full  top-0 left-0 bg-white dark:bg-[#202C36] font-nunito">
-      
+    <div id="countryModal"
+      class="fixed z-10 hidden w-full min-h-full  top-0 left-0 bg-white dark:bg-[#202C36] font-nunito pt-[75px]">
+
     </div>
 
   </main>
