@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/tailwind.css">
+  <title>Rest Countries</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <header class="py-6 shadow-header-shadow bg-white dark:bg-[#2B3844]">
+    <div class="container font-nunito">
+      <nav class="flex items-center justify-between text-[#111517] dark:text-white">
+        <div>
+          <h1 class="font-extrabold sm:text-[24px] text-[14px] sm:leading-[33px] leading-[20px]">Where in the world?
+          </h1>
+        </div>
+        <div>
+          <button id="switchMode"
+            class="font-semibold sm:text-[16px] text-[12px] sm:leading-[22px] leading-[16px] flex items-center"
+            onclick="toggleTheme()">
+            <i class="fa-regular fa-moon mr-2"></i>
+            Dark Mode
+          </button>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="bg-[#FAFAFA] dark:bg-[#202C36] relative">
+    <section class="py-12">
+      <div class="container font-nunito">
+        <div class="md:flex items-center justify-between mb-12">
+          <div class="md:w-[480px] md:mb-0 mb-10 shadow-search-shadow relative">
+            <div class="absolute inset-y-0 left-8 text-[#848484] dark:text-white flex items-center">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <input type="search" id="search"
+              class="block w-full py-[18px] pl-[74px] pr-10 text-[14px] leading-[20px] text-[#848484] rounded-[5px] bg-white focus:outline-blue-500 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-white dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              placeholder="Search for a country…" required>
+          </div>
+
+          <div class="w-[200px] font-nunito relative">
+            <button type="button" id="dropDown"
+              class="flex items-center py-[18px] pl-[24px] pr-[18px] rounded-[5px] bg-white dark:bg-[#2B3844] cursor-pointer shadow-search-shadow md:text-[14px] text-[12px] leading-[20px] text-[#111517] dark:text-white">
+              <p class="mr-[47px]">Filter by Region</p>
+              <i class="fa-solid fa-chevron-down text-[12px]"></i>
+            </button>
+            <div id="downMenu"
+              class="absolute hidden w-full mt-[4px] py-[8px] rounded-[5px] bg-white dark:bg-[#2B3844] cursor-pointer shadow-search-shadow md:text-[14px] text-[12px] leading-[20px] text-[#111517] dark:text-white">
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">All</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">Africa</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">America</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">Asia</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">Europe</p>
+              <p class="region py-[8px] pl-[24px] hover:bg-slate-100 w-full">Oceania</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="countries"
+          class="flex sm:justify-between justify-center flex-wrap items-center gap-x-2 sm:gap-y-[75px] gap-y-10">
+
+        </div>
+      </div>
+    </section>
+
+    <div id="countryModal" class="fixed hidden w-full min-h-screen top-0 left-0 bg-white dark:bg-[#202C36] font-nunito">
+   
+    </div>
+
+  </main>
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container{
+    max-width: 1310px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.countries{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 8px;
+    row-gap: 40px;
+}
+
+.country{
+    display: block;
+    width: 264px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.0294384);
+    cursor: pointer;
+}
+
+
+@media (min-width: 640px) {
+    .countries{
+        justify-content: flex-start;
+        row-gap: 75px;
+    }
+}
