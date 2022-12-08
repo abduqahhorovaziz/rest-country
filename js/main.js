@@ -142,18 +142,18 @@ function showCountryDetail(data) {
   countryModal.classList.toggle("hidden");
   countryModal.innerHTML = `
     <div class="container">
-        <div class="flex md:flex-row flex-col items-center justify-between md:pt-[200px] pt-[136px] pb-[60px] relative overflow-auto">
+        <div class="flex md:flex-row flex-col items-center justify-between gap-x-[50px] md:pt-[200px] pt-[136px] pb-[60px] relative overflow-auto">
         <button class="closeModal z-50 absolute font-nunito md:top-[80px] top-[40px] left-0 flex items-center justify-center w-[136px] h-[40px] rounded-md shadow-search-shadow font-light text-[16px] leading-[20px] text-[#111517] dark:text-white bg-white dark:bg-[#2B3844]">
         <i class="fa-solid fa-arrow-left-long mr-[10px] mt-[2px]"></i>Back</button>
                 <div class="md:w-[560px] w-full md:h-[401px] h-auto md:mb-0 mb-11 rounded-md overflow-hidden">
-                <img class="w-full h-full" src="${
+                <img class="w-full h-full object-cover" src="${
                   data.flags.svg
                 }" alt="">
                 </div>
                 <div>
                 <div class="flex md:flex-row flex-col md:items-center items-start md:mb-[60px]">
                     <div class="text-[#111517] dark:text-white md:mr-[141px] md:mb-0 mb-11">
-                    <h2 class="font-extrabold text-[32px] leading-[44px] mb-[23px]">${
+                    <h2 class="max-w-[300px] font-extrabold text-[32px] leading-[44px] mb-[23px]">${
                       data.name
                     }</h2>
                     <p class="font-semibold text-[16px] leading-8">Native Name: <span class="font-light">${
